@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-slide {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 0;
+}
+
+.logos-slide:hover {
+  animation-play-state: paused;
+}
+
+
+
+@font-face {
+  font-family: "hbold";
+  src: url("/fonts/HelveticaNeueBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "hmed";
+  src: url("/fonts/HelveticaNeueMedium.otf") format("opentype");
+}
