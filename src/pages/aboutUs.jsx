@@ -66,7 +66,7 @@ const AboutUsPage = () => {
             VELPACK'S JOURNEY
           </h1>
           <h2 className="text-xl sm:text-3xl font-hmed text-red-500">
-            Wrapping Responsibly since 1958
+            Wrapping Responsibly since 1956
           </h2>
         </div>
 
