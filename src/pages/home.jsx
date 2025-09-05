@@ -71,7 +71,7 @@ const Home = () => {
             variants={fadeIn("left", 1.2)}
             initial="hidden"
             whileInView="show"
-            className="text-xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
+            className="text-xl md:text-[32px] mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
           >
             PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
           </motion.h1>
@@ -125,7 +125,7 @@ const Home = () => {
           </button>
         </div>
         <div
-          className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[70%] md:h-[600px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+          className="w-[calc(100%+5rem)] -mx-6 h-[300px] md:w-[70%] md:h-[600px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
                 relative md:absolute md:-bottom-30 md:-right-[40%] md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
         >
           <iframe
