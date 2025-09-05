@@ -1,107 +1,105 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variant';
 import Navbar from '../components/navbar'
 import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
-import { useHref, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
 
 const Home = () => {
 
-const HeroSection = () => {
-  const images = [
-    {
-      desktop: "/assets/HP_Banner_1.jpg",
-      mobile: "/assets/mob-hero1.png",
-    },
-    {
-      desktop: "/assets/Velpack-Banner.jpg",
-      mobile: "/assets/mob-hero2.png",
-    },
-    {
-      desktop: "/assets/HP_Banner_3.jpg",
-      mobile: "/assets/mob-hero3.png",
-    },
-    {
-      desktop: "/assets/HP_Banner_4.jpg",
-      mobile: "/assets/mob-hero4.png",
-    },
-  ];
+  const HeroSection = () => {
+    const images = [
+      {
+        desktop: "/assets/HP_Banner_1.jpg",
+        mobile: "/assets/mob-hero1.png",
+      },
+      {
+        desktop: "/assets/Velpack-Banner.jpg",
+        mobile: "/assets/mob-hero2.png",
+      },
+      {
+        desktop: "/assets/HP_Banner_3.jpg",
+        mobile: "/assets/mob-hero3.png",
+      },
+      {
+        desktop: "/assets/HP_Banner_4.jpg",
+        mobile: "/assets/mob-hero4.png",
+      },
+    ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000);
+      return () => clearInterval(timer);
+    }, []);
 
-  return (
-    <motion.div
-      variants={fadeIn("up", 0.3)}
-      initial="hidden"
-      whileInView="show"
-      className="relative h-[45vh] md:h-screen overflow-hidden mt-8 mb-0 md:mb-6 md:mt-0"
-    >
-      {/* Background Images */}
-      {images.map((imageSet, index) => (
-        <div 
-          key={index} 
-          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
-            index === currentImageIndex ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img 
-            src={imageSet.mobile} 
-            className="block md:hidden w-full h-full object-cover pt-4"
-            alt={`Mobile Banner ${index + 1}`}
-          />
-          <img 
-            src={imageSet.desktop} 
-            className="hidden md:block w-full h-full object-cover"
-            alt={`Desktop Banner ${index + 1}`}
-          />
-        </div>
-      ))}
-
-      {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-end items-center pb-12 md:pb-24 pointer-events-none">
-        <motion.h1
-          variants={fadeIn("left", 1.2)}
-          initial="hidden"
-          whileInView="show"
-          className="text-xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
-        >
-          PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
-        </motion.h1>
-
-        <motion.button
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView="show"
-          className="pointer-events-auto px-3 py-1 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold text-sm md:text-base"
-        >
-          <Link to="/contactus"> GET IN TOUCH </Link>
-        </motion.button>
-      </div>
-
-      {/* Pagination Dots */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
+    return (
+      <motion.div
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView="show"
+        className="relative h-[45vh] md:h-screen overflow-hidden mt-8 mb-0 md:mb-6 md:mt-0"
+      >
+        {/* Background Images */}
+        {images.map((imageSet, index) => (
+          <div
             key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
-              index === currentImageIndex ? "bg-white" : "bg-gray-400"
-            }`}
-          ></button>
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+              }`}
+          >
+            <img
+              src={imageSet.mobile}
+              className="block md:hidden w-full h-full object-cover pt-4"
+              alt={`Mobile Banner ${index + 1}`}
+            />
+            <img
+              src={imageSet.desktop}
+              className="hidden md:block w-full h-full object-cover"
+              alt={`Desktop Banner ${index + 1}`}
+            />
+          </div>
         ))}
-      </div>
-    </motion.div>
-  );
-};
+
+        {/* Overlay Content */}
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-end items-center pb-10 md:pb-16 pointer-events-none">
+          <motion.h1
+            variants={fadeIn("left", 1.2)}
+            initial="hidden"
+            whileInView="show"
+            className="text-xl md:text-4xl mb-4 text-white text-center tracking-wider md:tracking-[0.14em] font-hmed leading-tight md:leading-[38px] px-4"
+          >
+            PAPER-BASED PACKAGING SOLUTIONS SINCE 1956
+          </motion.h1>
+
+          <motion.button
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            className="pointer-events-auto px-3 py-1 md:px-6 md:py-2 border-2 border-[#e81d2d] text-white bg-transparent rounded-md hover:bg-[#b7162a] hover:text-white transition duration-300 font-hbold text-sm md:text-base"
+          >
+            <Link to="/contactus"> GET IN TOUCH </Link>
+          </motion.button>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${index === currentImageIndex ? "bg-white" : "bg-gray-400"
+                }`}
+            ></button>
+          ))}
+        </div>
+      </motion.div>
+    );
+  };
 
   const AboutUs = () => (
     <motion.section
@@ -111,12 +109,12 @@ const HeroSection = () => {
       className="md:my-20 bg-[#b7162a] p-6 text-white relative"
     >
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
-        <div className="w-full md:w-1/2 p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
-          <h2 className="text-2xl text-center md:text-left md:text-4xl font-hbold">
+        <div className="w-full md:w-[40%] p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
+          <h2 className="text-2xl text-center md:text-left md:text-3xl font-hbold">
             WHO ARE WE?
           </h2>
           <div className="container mx-auto md:mx-0 px-4 flex flex-col md:flex-row items-center justify-center md:justify-start bg-white h-1 w-16 relative"></div>
-          <p className="text-base text-center md:text-left md:text-lg font-hmed">
+          <p className="text-base text-center md:text-left md:text-lg">
             Velpack has been a pioneer in the paper-based packaging industry since
             1956. We specialize in providing high-quality folded cartons for the
             pharmaceutical, FMCG and industrial sectors.
@@ -127,8 +125,8 @@ const HeroSection = () => {
           </button>
         </div>
         <div
-          className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[60%] md:h-[500px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
-                relative md:absolute md:-bottom-30 md:-right-1/3 md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
+          className="w-[calc(100%+3rem)] -mx-6 h-[300px] md:w-[70%] md:h-[600px] bg-white rounded-none md:rounded-lg shadow-2xl flex items-center justify-center 
+                relative md:absolute md:-bottom-30 md:-right-[40%] md:transform md:-translate-x-1/2 md:scale-75 -mb-6 md:mb-0 mt-6 md:mt-0"
         >
           <iframe
             className="w-full h-full md:rounded-lg"
@@ -203,7 +201,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl md:text-4xl font-hbold text-center"
+          className="text-2xl md:text-3xl font-hbold text-center"
         >
           OUR CAPABILITIES
           <div className="w-16 h-1 bg-white mb-4 md:mb-6 mx-auto mt-3"></div>
@@ -319,7 +317,7 @@ const HeroSection = () => {
 
     return (
       <section className="bg-red-600 py-6 md:py-10">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-8 text-white">
           TRUSTED BY LEADING BRANDS
         </h2>
         <LogoCarousel logos={logos} speed={30} />
@@ -330,19 +328,20 @@ const HeroSection = () => {
   const TrustedclientsSection = () => {
     const logos = [
       "walgreen_1", "CVS", "kroger_pharmacy", "Tesco", "Sainsburys",
-      "Bells_Healthcare", "Perrigo_logo", "Galderma", "Dr._Reddys_Laboratories_y", 
+      "Bells_Healthcare", "Perrigo_logo", "Galderma", "Dr._Reddys_Laboratories_y",
       "Coles", "Bayer", "Mankind"
     ];
 
     return (
       <section className="bg-red-800 py-6 md:py-10">
-        <h2 className="text-xl md:text-4xl font-bold text-center mb-4 md:mb-8 text-white">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-8 text-white">
           PROUD TO BE ASSOCIATED WITH
         </h2>
         <LogoCarousel logos={logos} speed={30} />
       </section>
     );
   };
+
   const FeaturesSection = () => (
     <motion.section
       variants={fadeIn("up", 0.3)}
@@ -355,7 +354,7 @@ const HeroSection = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl md:text-4xl font-hbold text-center mb-2 text-[#e81d2d]"
+          className="text-2xl md:text-3xl font-hbold text-center mb-2 text-[#e81d2d]"
         >
           OUR FEATURES
         </motion.h2>
@@ -404,8 +403,8 @@ const HeroSection = () => {
                   <div
                     key={index}
                     className={`flex flex-col items-center ${index === array.length - 1
-                        ? "col-span-2 mx-auto md:col-span-1 md:mx-0 w-1/2 md:w-full"
-                        : ""
+                      ? "col-span-2 mx-auto md:col-span-1 md:mx-0 w-1/2 md:w-full"
+                      : ""
                       }`}
                   >
                     <div className="w-full aspect-square bg-gray-200 mb-2 md:mb-4 rounded-lg overflow-hidden">
@@ -427,6 +426,7 @@ const HeroSection = () => {
       </div>
     </motion.section>
   );
+
   const SecurityFeaturesSection = () => (
     <section
 
@@ -451,6 +451,7 @@ const HeroSection = () => {
       </div>
     </section>
   );
+
   const DividedInfoSection = () => {
     const images = [
       {
@@ -483,7 +484,7 @@ const HeroSection = () => {
             >
               <div className="">
                 {images.map(({ name, image, className, alt }) => (
-                  <a 
+                  <a
                     key={name}
                     href="https://createcluster.com/"
                     target="_blank"
@@ -638,7 +639,7 @@ const HeroSection = () => {
       <FeaturesSection />
       <SecurityFeaturesSection />
       <DividedInfoSection />
-       {/*  <ReviewsSection /> */}
+      {/*  <ReviewsSection /> */}
       <Footer />
     </>
   );

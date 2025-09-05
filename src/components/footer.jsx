@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
 const Footer = () => {
     return (
         <footer className="bg-white relative py-8 sm:py-16">
@@ -10,11 +7,11 @@ const Footer = () => {
                     {/* Left Column */}
                     <div className="w-full sm:w-1/3 pr-0 sm:pr-8 mb-6 sm:mb-0">
                         <img src="/assets/Velpack_logo_fullcolor_rgb.png" alt="Velpack Logo" className="h-10 mb-3" />
-                        <p className="text-sm mb-1">Velpack Pvt. Ltd.</p>
-                        <p className="text-sm mb-1">A-233, TTC Area, MIDC, Mahape,</p>
-                        <p className="text-sm mb-1">Navi Mumbai 400 710, India</p>
-                        <p className="text-sm mb-1">info@velpack.com</p>
-                        <p className="text-sm">+91 22 2778 1277</p>
+                        <p className="text-md mb-1">Velpack Pvt. Ltd.</p>
+                        <p className="text-md mb-1">A-233, TTC Area, MIDC, Mahape,</p>
+                        <p className="text-md mb-1">Navi Mumbai 400 710, India</p>
+                        <p className="text-md mb-1">info@velpack.com</p>
+                        <p className="text-md">+91 22 2778 1277</p>
                     </div>
 
                     {/* Vertical Divider (visible only on large screens) */}

@@ -62,7 +62,7 @@ const Footprint = () => {
         }}
         initial="hidden"
         animate={isVisible ? "show" : "hidden"}
-        className="text-2xl md:text-4xl font-bold text-center mb-4"
+        className="text-2xl md:text-3xl font-bold text-center mb-4"
       >
         OUR FOOTPRINT
         <div className="w-16 h-1 bg-white mb-6 mx-auto mt-3"></div>
