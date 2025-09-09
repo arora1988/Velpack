@@ -61,7 +61,7 @@ const CertificationPage = () => {
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <div className="p-3 sm:p-4">
+              <div className="p-3 sm:p-4 text-center">
                 <h2 className="text-lg sm:text-xl font-bold mb-2 text-[#e81d2d]">
                   {cert.title}
                 </h2>
