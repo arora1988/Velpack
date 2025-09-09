@@ -1,5 +1,3 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
@@ -70,25 +68,25 @@ const Technologypage = () => {
   return (
     <div className="bg-white overflow-x-hidden">
       <Navbar />
-      
+
       {/* Hero Section with Animation */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="relative h-[50vh] sm:h-screen"
       >
-        <img 
+        <img
           src="/assets/OT_Banner.jpg"
-          alt="Our Services at Velpack" 
+          alt="Our Services at Velpack"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-3xl sm:text-5xl font-bold text-center px-4"
+            className="text-white text-3xl sm:text-5xl font-hbold text-center px-4"
           >
             OUR TECHNOLOGY
           </motion.h1>
@@ -98,26 +96,26 @@ const Technologypage = () => {
       {/* Technologies Section */}
       <div className="bg-[#b7162a] pt-16 pb-16">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-3xl sm:text-4xl font-bold text-center mb-2"
+            className="text-white heading text-center mb-2"
           >
             STATE OF THE ART MACHINERY
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-base md:text-xl text-center mb-16 text-sm sm:text-base"
+            className="text-white text-base md:text-xl text-center mb-16 sm:text-base"
           >
             With state-of-the-art machinery and advanced manufacturing processes, Velpack delivers precision and quality in every product.
           </motion.p>
 
           <div className="space-y-8">
             {technologies.map((tech, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -125,7 +123,7 @@ const Technologypage = () => {
                 className="flex flex-col sm:flex-row bg-[#e81d2d] rounded-lg overflow-hidden shadow-lg"
               >
                 <div className="w-full sm:w-1/3 flex items-center justify-center">
-                  <motion.img 
+                  <motion.img
                     initial={{ scale: 0.9 }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
@@ -138,8 +136,8 @@ const Technologypage = () => {
                   <h3 className="text-white text-xl sm:text-2xl font-bold mb-4">{tech.title}</h3>
                   <div className="space-y-2">
                     {tech.items.map((item, i) => (
-                      <motion.p 
-                        key={i} 
+                      <motion.p
+                        key={i}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: i * 0.1 }}

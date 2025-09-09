@@ -1,5 +1,3 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
@@ -46,7 +44,7 @@ const CertificationPage = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-3xl font-bold text-center mb-8 mt-8 text-[#e81d2d]"
+          className="heading text-center mb-8 mt-8 text-[#e81d2d]"
         >
           Our Certifications
         </motion.h1>

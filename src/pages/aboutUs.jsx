@@ -62,10 +62,10 @@ const AboutUsPage = () => {
       <div className="bg-white min-h-screen">
         {/* Header with adjusted mobile spacing between h1 and h2 */}
         <div className="text-center py-16 md:py-24 mt-8">
-          <h1 className="text-2xl sm:text-4xl font-hbold mb-1 sm:mb-4">
+          <h1 className="heading mb-1 sm:mb-4">
             VELPACK'S JOURNEY
           </h1>
-          <h2 className="text-xl sm:text-3xl font-hmed text-red-500">
+          <h2 className="text-xl sm:text-2xl font-hmed text-red-500">
             Wrapping Responsibly since 1956
           </h2>
         </div>
@@ -76,9 +76,9 @@ const AboutUsPage = () => {
           <div className="hidden sm:flex">
             <div className="relative w-4/5">
               <div className="aspect-[16/9]">
-                <img 
+                <img
                   src="/assets/AU_Banner.jpg"
-                  alt="Manufacturing equipment" 
+                  alt="Manufacturing equipment"
                   className="w-full h-full object-cover object-left"
                 />
                 <div className="absolute bottom-8 right-0 w-1/3 bg-stone-300 p-6 shadow-lg translate-x-1/4">
@@ -95,9 +95,9 @@ const AboutUsPage = () => {
           <div className="sm:hidden flex flex-col">
             <div className="w-full">
               <div className="aspect-[16/9]">
-                <img 
+                <img
                   src="/assets/AU_Banner.jpg"
-                  alt="Manufacturing equipment" 
+                  alt="Manufacturing equipment"
                   className="w-full h-full object-cover object-left"
                 />
               </div>
@@ -112,17 +112,17 @@ const AboutUsPage = () => {
 
         {/* Spacing for desktop only */}
         <div className="hidden sm:block h-16"></div>
-        
+
         {/* Team Section */}
         <div className="bg-[#b7162a] sm:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-white text-2xl sm:text-4xl font-bold text-center pt-6 mb-4 sm:mt-0">OUR TEAM</h2>
+            <h2 className="text-white heading text-center pt-6 mb-4 sm:mt-0">OUR TEAM</h2>
             <div className="w-16 h-1 bg-white mb-6 mx-auto mt-2"></div>
 
             <p className="text-white text-base md:text-xl text-center mb-12 text-sm sm:text-base">
               Combining seasoned expertise with dynamic innovation, our leadership team drives Velpack's success.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg text-center">
@@ -138,7 +138,7 @@ const AboutUsPage = () => {
                 </div>
               ))}
             </div>
-            
+
             <p className="text-white text-base md:text-xl text-center mt-8 sm:mt-12 mb-0 sm:mb-0 pb-4 sm:pb-0 text-sm sm:text-base">
               As a family-owned business, we prioritize integrity, innovation, and excellence in all we do. Our commitment to quality and customer satisfaction sets us apart.
             </p>
@@ -147,26 +147,25 @@ const AboutUsPage = () => {
 
         {/* Sections Navigation */}
         <div className="hidden sm:mt-16 sm:block"></div>
-        
+
         <div>
           <div className="bg-black py-4 flex flex-wrap justify-center px-4 sm:px-32">
             {Object.keys(sections).map((section) => (
               <button
                 key={section}
-                className={`text-sm sm:text-lg font-medium px-2 sm:px-4 py-1 sm:py-2 m-1 ${
-                  activeSection === section ? 'text-red-500' : 'text-white'
-                } transition-colors duration-300`}
+                className={`text-sm sm:text-lg font-medium px-2 sm:px-4 py-1 sm:py-2 m-1 ${activeSection === section ? 'text-red-500' : 'text-white'
+                  } transition-colors duration-300`}
                 onClick={() => setActiveSection(section)}
               >
                 {sections[section].heading}
               </button>
             ))}
           </div>
-          
+
           {/* Desktop layout for carousel */}
           <div className="hidden sm:block relative w-full">
             <div className="relative aspect-[21/9] w-full">
-              <img 
+              <img
                 src={sections[activeSection].image}
                 alt={sections[activeSection].heading}
                 className="w-full h-full object-cover"
@@ -182,7 +181,7 @@ const AboutUsPage = () => {
           {/* Mobile layout for carousel */}
           <div className="sm:hidden w-full">
             <div className="w-full">
-              <img 
+              <img
                 src={sections[activeSection].image}
                 alt={sections[activeSection].heading}
                 className="w-full aspect-[16/9] object-cover"

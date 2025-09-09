@@ -110,7 +110,7 @@ const Home = () => {
     >
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative">
         <div className="w-full md:w-[40%] p-4 md:p-8 space-y-4 flex justify-center md:justify-start items-center md:items-start flex-col">
-          <h2 className="text-2xl text-center md:text-left md:text-3xl font-hbold">
+          <h2 className="heading text-center md:text-left font-hbold">
             WHO ARE WE?
           </h2>
           <div className="container mx-auto md:mx-0 px-4 flex flex-col md:flex-row items-center justify-center md:justify-start bg-white h-1 w-16 relative"></div>
@@ -147,7 +147,7 @@ const Home = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl md:text-3xl font-hbold text-center text-[#b7162a] mb-6 md:mb-10"
+          className="heading text-center text-[#b7162a] mb-6 md:mb-10"
         >
           We offer specialized paper-based packaging solutions for various
           industries,
@@ -201,7 +201,7 @@ const Home = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl md:text-3xl font-hbold text-center"
+          className="heading text-center"
         >
           OUR CAPABILITIES
           <div className="w-16 h-1 bg-white mb-4 md:mb-6 mx-auto mt-3"></div>
@@ -317,7 +317,7 @@ const Home = () => {
 
     return (
       <section className="bg-red-600 py-6 md:py-10">
-        <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-8 text-white">
+        <h2 className="heading text-center mb-4 md:mb-8 text-white">
           TRUSTED BY LEADING BRANDS
         </h2>
         <LogoCarousel logos={logos} speed={30} />
@@ -334,7 +334,7 @@ const Home = () => {
 
     return (
       <section className="bg-red-800 py-6 md:py-10">
-        <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-8 text-white">
+        <h2 className="heading text-center mb-4 md:mb-8 text-white">
           PROUD TO BE ASSOCIATED WITH
         </h2>
         <LogoCarousel logos={logos} speed={30} />
@@ -354,7 +354,7 @@ const Home = () => {
           variants={fadeIn("up", 0.3)}
           initial="hidden"
           whileInView="show"
-          className="text-2xl md:text-3xl font-hbold text-center mb-2 text-[#e81d2d]"
+          className="heading text-center mb-2 text-[#e81d2d]"
         >
           OUR FEATURES
         </motion.h2>

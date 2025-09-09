@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
@@ -60,14 +60,14 @@ const ContactusPage = () => {
       <Navbar />
 
       {/* Contact Form Section with fixed mobile spacing */}
-      <div 
-        className="bg-[#b7162a] text-white py-12 md:py-16" 
+      <div
+        className="bg-[#b7162a] text-white py-12 md:py-16"
         id='contact'
         style={{ marginTop: '96px' }} // Fixed 96px spacing for all screens
       >
         <div className="container mx-auto px-4 flex justify-center">
           <div className="w-full max-w-2xl">
-            <h1 className="text-3xl font-bold mb-8">We Would Love to Hear from You.</h1>
+            <h1 className="heading mb-8">We Would Love to Hear from You.</h1>
 
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
