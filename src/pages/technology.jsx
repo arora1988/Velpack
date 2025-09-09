@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 
 const Technologypage = () => {
   const technologies = [
@@ -67,8 +65,6 @@ const Technologypage = () => {
 
   return (
     <div className="bg-white overflow-x-hidden">
-      <Navbar />
-
       {/* Hero Section with Animation */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -86,7 +82,7 @@ const Technologypage = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-3xl sm:text-5xl font-hbold text-center px-4"
+            className="text-white text-xl md:text-[32px] font-hbold text-center px-4"
           >
             OUR TECHNOLOGY
           </motion.h1>
@@ -153,8 +149,6 @@ const Technologypage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

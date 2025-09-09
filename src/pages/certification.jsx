@@ -1,6 +1,4 @@
 import { motion } from 'framer-motion';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 
 const CertificationPage = () => {
   const certifications = [
@@ -37,8 +35,7 @@ const CertificationPage = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
+    <div className="h-full w-full">
       <div className="container mx-auto px-4 pt-16 pb-8 overflow-x-hidden">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -74,7 +71,6 @@ const CertificationPage = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

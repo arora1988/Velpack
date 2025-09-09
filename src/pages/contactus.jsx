@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
 
 const ContactusPage = () => {
   const [formData, setFormData] = useState({
@@ -57,8 +55,6 @@ const ContactusPage = () => {
 
   return (
     <div className="bg-white">
-      <Navbar />
-
       {/* Contact Form Section with fixed mobile spacing */}
       <div
         className="bg-[#b7162a] text-white py-12 md:py-16"
@@ -177,8 +173,6 @@ const ContactusPage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

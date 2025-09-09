@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variant';
-import Navbar from '../components/navbar'
-import Footer from '../components/footer';
 import Footprint from '../components/Footprint';
 import { Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
@@ -629,7 +627,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <HeroSection />
       <AboutUs />
       <ServicesSection />
@@ -640,9 +637,8 @@ const Home = () => {
       <SecurityFeaturesSection />
       <DividedInfoSection />
       {/*  <ReviewsSection /> */}
-      <Footer />
     </>
   );
 }
 
-export default Home
+export default Home;
